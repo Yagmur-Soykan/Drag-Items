@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div id="left">
+                <div class=" list" draggable="true">10</div>
+                <div class="list" draggable="true">20</div>
+                <div class="list" draggable="true">5</div>
+                <div class="list" draggable="true">25</div>
+                <div class="list" draggable="true">15</div>   
+                <div class="list" id="toplamDivLeft" draggable="false" style="background-color:rgb(252, 245, 246);"></div>        
+        </div>
+          
+        <div id="right">
+            <div class="list" id="toplamDivRight" draggable="false" style="background-color:rgb(252, 245, 246);"></div>        
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+<!-- 
+NOT 
+list.addEventListener("dragstart", function(e) {...}): Sürükleme işlemi başladığında tetiklenen olaydır; burada selected değişkenine sürüklenen öğe atanır.
+
+rightBox.addEventListener("dragover", function(e) {...}): Sürüklenen öğe rightBox üzerinde hareket ederken tetiklenen olaydır; preventDefault() çağrısıyla varsayılan davranış engellenir, böylece öğe bırakılabilir.
+
+rightBox.addEventListener("drop", function(e) {...}): Sürüklenen öğe rightBox üzerine bırakıldığında tetiklenen olaydır; burada öğe rightBox içine eklenir ve selected değişkeni sıfırlanır.-->
